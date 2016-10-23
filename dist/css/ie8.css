@@ -1,0 +1,20 @@
+.header-singup, .header-login, .header-find, .works-t{
+	position: relative;
+}
+
+.discover-name{
+	background: transparent;
+	background: url(../img/rgba_ie8.png);
+}
+
+.discover-name:hover{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.discover-searchInput[type=text]	{
+	padding-top: 10px;
+}
+
+.header-singup, .header-login, .header-find, .partners-avatar, .works-t, .partners-icon, .partners-see, .discover-searchInput, .discover-searchButton{
+	behavior: url(plugins/PIE.htc);
+}

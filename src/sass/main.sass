@@ -1,0 +1,592 @@
+@import "mixins"
+@import "sprite"
+
+@include font-face(Montserrat, "../fonts/montserrat-regular-webfont")
+@include font-face(Montserrat-bold, "../fonts/montserrat-bold-webfont")
+@include font-face(Roboto, "../fonts/roboto-regular-webfont")
+@include font-face(Roboto-bold, "../fonts/roboto-bold-webfont")
+@include font-face(Roboto-light, "../fonts/roboto-light-webfont")
+
+$main-font: 'Montserrat', Arial, sans-serif
+$main-font-b: 'Montserrat-bold', Arial, sans-serif
+$second-font: 'Roboto', sans-serif, Arial
+$second-font-b: 'Roboto-bold', sans-serif, Arial
+$second-font-l: 'Roboto-light', sans-serif, Arial
+
+a
+	text-decoration: none
+.cbalink
+	display: none
+
+.clearfix:after
+	content: ""
+	display: table
+	clear: both
+
+// html
+// 	overflow: scroll
+// 	overflow-x: hidden
+
+// ::-webkit-scrollbar
+// 	width: 0px
+// 	background: transparent
+
+// ::-webkit-scrollbar-thumb
+// 	background: #FF0000
+
+.wrapper
+	text-align: center
+
+.header
+	margin: 0 auto
+	background: lightgrey url("../img/header-bg.jpg") center no-repeat
+	background-size: cover
+	color: white
+	height: 540px
+	&-reg
+		padding-top: 21px
+	&-login
+		display: inline-block
+		width: 90px
+		height: 35px
+		color: white
+		font-family: $main-font-b
+		font-size: 14px
+		line-height: 32px
+		box-sizing: border-box
+		border: 2px solid transparent
+		border-radius: 20px
+		transition: all 0.2s ease
+		&:hover
+			border: 2px solid white
+	&-singup
+		display: inline-block
+		width: 90px
+		height: 35px
+		color: white
+		font-family: $main-font-b
+		font-size: 14px
+		line-height: 32px
+		box-sizing: border-box
+		border-radius: 20px
+		border: 2px solid transparent
+		transition: all 0.2s ease
+		&:hover
+			border: 2px solid white
+
+	&-text__t
+		font-family: $main-font-b
+		font-size: 22px
+		text-transform: uppercase
+		margin-top: 116px
+	&-text__m
+		font-family: $main-font-b
+		font-size: 30px
+		text-transform: uppercase
+		line-height: 34px
+		margin-top: 32px
+	&-text__b
+		margin: 0 auto
+		font-family: $second-font-l
+		font-size: 18px
+		margin-top: 12px
+		margin-bottom: 20px
+		width: 70%
+	&-find
+		display: block
+		margin: 0 auto
+		color: white
+		font-family: $main-font-b
+		font-size: 14px
+		line-height: 36px
+		width: 280px
+		height: 40px
+		background-color: #ff4e50
+		border-radius: 20px
+		box-sizing: border-box
+		border: 2px solid #ff4e50
+		transition: all 0.5s ease
+		&:hover
+			color: #ff4e50
+			background-color: white
+
+.works
+	width: 94%
+	margin: 0 auto
+	&-title
+		font-family: $main-font
+		font-size: 22px
+		font-weight: 700
+		margin-top: 37px
+		margin-bottom: 16px
+	&-step
+		display: block
+		margin: 0 auto
+		width: inherit
+		height: 240px
+		margin-bottom: 10px
+		border-radius: 4px
+		text-align: left
+		position: relative
+	&-block
+		display: block
+		position: absolute
+		bottom: 19px
+		margin-left: 19px
+		width: 270px
+	&-t
+		display: block
+		width: 70px
+		height: 20px
+		border-radius: 10px
+		color: white
+		font-family: $main-font
+		font-size: 10px
+		font-weight: 400
+		line-height: 20px
+		letter-spacing: 2px
+		text-align: center
+		text-transform: uppercase
+		background-color: #ff4e50
+	&-m
+		color: white
+		font-family: $main-font
+		font-size: 24px
+		font-weight: 700
+		line-height: 27px
+		margin-bottom: 15px
+		margin-top: 16px
+	&-b
+		color: #ccc
+		font-family: $second-font-l
+		font-size: 14px
+		line-height: 15px
+
+.bg-step1
+	background: url("../img/step1.jpg") center
+	background-size: cover
+
+.bg-step2
+	background: url("../img/step2.jpg") center
+	background-size: cover
+
+.bg-step3
+	background: url("../img/step3.jpg") center
+	background-size: cover
+
+.owl-nav
+	display: none
+
+.partners
+	&-title
+		margin: 0 auto
+		width: 98%
+		font-family: $main-font-b
+		font-size: 22px
+		line-height: 27px
+		margin-top: 24px
+	&-block
+		margin: 0 auto
+		display: block
+		width: 220px
+		margin-top: 15px
+		margin-bottom: 27px
+	&-avatar
+		display: block
+		margin: 0 auto
+		width: 122px
+		height: 122px
+		border-radius: 50%
+		position: relative
+	&-icon
+		display: block
+		position: absolute
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		top: 84px
+		left: 85px
+		box-sizing: border-box
+		border: 4px solid white
+	&-name
+		margin-top: 18px
+		font-family: $main-font-b
+		color: #333
+		font-size: 14px
+	&-info
+		margin-top: 16px
+		color: #666
+		font-family: $second-font-l
+		font-size: 14px
+		line-height: 16px
+		font-weight: 500
+	&-see
+		display: block
+		margin: 0 auto
+		font-family: $main-font-b
+		font-size: 14px
+		line-height: 40px
+		color: #ff4e50
+		width: 280px
+		height: 40px
+		box-sizing: border-box
+		border: 2px solid #ff4e50
+		border-radius: 20px
+		transition: all 0.5s ease
+		&:hover
+			background-color: #ff4e50
+			color: white
+
+
+.partner1
+	background: url("../img/partner1.jpg") center
+
+.partner2
+	background: url("../img/partner2.jpg") center
+
+.partner3
+	background: url("../img/partner3.jpg") center
+
+.partner4
+	background: url("../img/partner4.jpg") center
+
+.red
+	background: #ff4e50
+
+.green
+	background: #ffa507
+
+.yellow
+	background: #1cd7ad
+
+.blue
+	background: #4e73db
+
+.icon-tv
+	@include sprite($tv)
+	display: block
+	margin: 7px 8px
+
+.icon-coffee
+	@include sprite($coffee)
+	display: block
+	margin: 6px 8px
+
+.icon-flask
+	@include sprite($flask)
+	display: block
+	margin: 7px 9px
+
+.icon-plane
+	@include sprite($plane)
+	display: block
+	margin: 8px 6px
+
+.discover
+	&-header, &-footer
+		margin-top: 37px
+		font-family: $main-font-b
+		font-size: 22px
+		line-height: 24px
+	&-footer
+		margin-top: 29px
+	&-grid
+		margin: 0 auto
+		margin-top: 15px
+		width: 300px
+		height: 1080px
+	&-name
+		display: table-cell
+		height: inherit
+		width: inherit
+		vertical-align: middle
+		color: white
+		font-family: $main-font-b
+		font-size: 22px
+		text-transform: capitalize
+		background-color: rgba(0, 0, 0, 0.3)
+		transition: all 0.5s ease
+		&:hover
+			opacity: 0
+	&-info
+		color: #333
+		font-family: $second-font-l
+		font-size: 18px
+		margin-top: 15px
+	&-searchInput
+		width: 280px
+		height: 40px
+		background-color: white
+		border: 1px solid #ccc
+		border-radius: 4px
+		box-shadow: 0 1px 0 #eee
+		box-sizing: border-box
+		margin-right: 4px
+		margin-top: 17px
+		&[type=text]
+			padding-left: 15px
+			color: #999
+			font-family: $second-font-l
+			font-size: 14px
+	&-searchButton
+		display: block
+		margin: 0 auto
+		font-family: $main-font-b
+		font-size: 14px
+		line-height: 36px
+		color: white
+		width: 280px
+		height: 40px
+		border: none
+		outline: none
+		background-color: #ff4e50
+		border-radius: 20px
+		cursor: pointer
+		box-sizing: border-box
+		border: 2px solid #ff4e50
+		transition: all 0.5s ease
+		&:hover
+			color: #ff4e50
+			background-color: white
+
+.grid
+	&-item
+		float: left
+		height: 120px
+		width: 300px
+		margin-bottom: 10px
+		border-radius: 4px
+		&--width2
+			width: 300px
+
+
+.footer
+	margin-top: 40px
+	border-top: 4px solid #ff4e50
+	height: 192px
+	&-name
+		margin-top: 17px
+		color: #ff4e50
+		font-family: $main-font-b
+		font-size: 17px
+		text-transform: uppercase
+	&-company
+		margin-top: 16px
+		color: #333
+		font-family: $main-font-b
+		font-size: 14px
+	&-item
+		display: inline-block
+		margin: 0 7px
+	&-link
+		color: #666
+		font-family: $second-font-l
+		font-size: 14px
+		line-height: 24px
+		&:hover
+			color: #ff4e50
+	&-partners
+		margin-top: 11px
+		color: #333
+		font-family: $main-font-b
+		font-size: 14px
+	&-designed
+		margin-top: 15px
+		color: #ccc
+		font-family: $main-font-b
+		font-size: 10px
+		text-transform: uppercase
+		letter-spacing: 1px
+	&-logo
+		display: block
+		margin: 0 auto
+		margin-top: 9px
+		@include sprite($logo)
+
+
+@media only screen and ( min-width: 768px )
+
+	.header
+		height: 700px
+		&-top
+			margin: 0 auto
+			width: 670px
+			padding-top: 38px
+		&-reg
+			float: right
+			padding: 0
+		&-login
+			margin-right: 3px
+		&-singup
+			margin-top: 0
+		&-text__t
+			float: left
+			margin: 0
+			margin-top: 9px
+		&-text__m
+			margin: 0 auto
+			margin-top: 143px
+			font-size: 52px
+			width: 500px
+			line-height: 64px
+		&-text__b
+			font-size: 24px
+			margin-top: 21px
+		&-find
+			width: 226px
+			margin-top: 36px
+	.works
+		width: 768px
+		&-title
+			margin-top: 97px
+			margin-bottom: 36px
+		&-step
+			height: 400px
+		&-block
+			width: 205px
+			bottom: 20px
+			margin-left: 18px
+
+	.carousel-block
+		display: inline-block
+		width: 236px
+		margin-right: 20px
+		&:last-child
+			margin: 0
+	.owl-nav
+		display: block
+		position: absolute
+		top: 37px
+		height: 60px
+		width: inherit
+	.owl-next, .owl-prev
+		display: inline-block
+		position: absolute
+	.owl-prev
+		left: 18px
+	.owl-next
+		right: 18px
+
+	.arrow-l
+		cursor: pointer
+		@include sprite($arrow-l)
+
+	.arrow-r
+		cursor: pointer
+		@include sprite($arrow-r)
+
+	.partners
+		&-title
+			margin-top: 83px
+		&-box
+			margin: 0 auto
+			margin-top: 34px
+			width: 650px
+		&-block
+			display: inline-table
+			height: 230px
+			margin: 0px 15px 26px 15px
+		&-info
+			width: 220px
+		&-see
+			margin-top: 12px
+			width: 190px
+
+	.discover
+		&-header
+			margin-top: 98px
+		&-grid
+			margin-top: 34px
+			width: 768px
+		&-footer
+			margin-top: 77px
+		&-info
+			margin-top: 34px
+		&-searchForm
+			margin-top: 22px
+		&-searchInput, &-searchButton
+			display: inline-block
+		&-searchInput
+			width: 240px
+			margin-right: 10px
+		&-searchButton
+			width: 160px
+			margin-right: 3px
+
+	.grid
+		&-item
+			width: 236px
+			height: 310px
+			margin-bottom: 20px
+			margin-right: 10px
+			margin-left: 10px
+			&--width2
+				width: 492px
+
+	.footer
+		margin-top: 100px
+		&-block
+			margin: 0 auto
+			margin-top: 22px
+			width: 768px
+		&-item
+			display: block
+		&-list
+			margin-top: 11px
+			margin-left: -6px
+			text-align: left
+		&-partners
+			margin: 16px 0 0 25px
+		&-develop
+			float: right
+			margin-right: 18px
+		&-elem
+			float: left
+			margin-left: 40px
+			margin-right: 41px
+		&-logo
+			margin-right: 22px
+
+
+@media only screen and ( min-width: 1440px )
+
+	.header
+		&-top
+			width: 940px
+
+	.carousel-block
+		height: 400px
+		width: 300px
+
+	.owl-nav
+		top: 152px
+
+	.works
+		width: 960px
+		&-block
+			width: 260px
+
+	.partners
+		&-box
+			width: 1000px
+		&-block
+			margin: 0px 10px 26px 10px
+
+	.discover-grid
+		width: 963px
+
+	.grid-item
+		width: 300px
+		height: 310px
+		&--width2
+			width: 620px
+
+	.footer
+		&-block
+			width: 984px
+		&-elem
+			margin: 0 71px 0 23px
+		&-partners
+			margin: 16px 0 0 0
+		&-develop
+			margin-right: 0

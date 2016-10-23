@@ -1,0 +1,11 @@
+.owl-nav {
+	right: 145px;
+}
+
+.owl-prev {
+	margin-left: -145px;
+}
+
+.owl-next {
+	margin-right: -145px;
+}
